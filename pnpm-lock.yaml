@@ -290,6 +290,9 @@ importers:
       passport-microsoft:
         specifier: 2.1.0
         version: 2.1.0
+      passport-openidconnect:
+        specifier: 0.1.2
+        version: 0.1.2
       pg:
         specifier: 8.21.0
         version: 8.21.0
@@ -357,6 +360,9 @@ importers:
       '@types/passport-microsoft':
         specifier: 2.1.1
         version: 2.1.1
+      '@types/passport-openidconnect':
+        specifier: 0.1.3
+        version: 0.1.3
       '@types/supertest':
         specifier: 7.2.0
         version: 7.2.0
@@ -1772,11 +1778,11 @@ packages:
         optional: true
 
   '@CuriousCorrelation/plugin-appload@https://codeload.github.com/CuriousCorrelation/tauri-plugin-appload/tar.gz/9d4528be4f385bccbe46859631d31aa2ee1ec0b6':
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/CuriousCorrelation/tauri-plugin-appload/tar.gz/9d4528be4f385bccbe46859631d31aa2ee1ec0b6}
+    resolution: {gitHosted: true, integrity: sha512-fH4riUTO4+6/Pr87Q4PTV7EqGXEnSuLl01g3ws54V2k+A3LDzbCrSa+50XBbmPgroHxnhefkXig8q8qL099f0g==, tarball: https://codeload.github.com/CuriousCorrelation/tauri-plugin-appload/tar.gz/9d4528be4f385bccbe46859631d31aa2ee1ec0b6}
     version: 0.1.0
 
   '@CuriousCorrelation/plugin-relay@https://codeload.github.com/CuriousCorrelation/tauri-plugin-relay/tar.gz/42f449e1c5657679fecf0374b0ce5047ad03c069':
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/CuriousCorrelation/tauri-plugin-relay/tar.gz/42f449e1c5657679fecf0374b0ce5047ad03c069}
+    resolution: {gitHosted: true, integrity: sha512-gqhmp76LZ2ha7lMP257JteveLdEi4GnpvfLQr7bW6BO6Ov7cMHlFGV7ve4tNYouLWU19n7d5IazWEgrb4T9m2g==, tarball: https://codeload.github.com/CuriousCorrelation/tauri-plugin-relay/tar.gz/42f449e1c5657679fecf0374b0ce5047ad03c069}
     version: 0.1.0
 
   '@acemir/cssom@0.9.31':
@@ -5735,6 +5741,9 @@ packages:
 
   '@types/passport-oauth2@1.8.0':
     resolution: {integrity: sha512-6//z+4orIOy/g3zx17HyQ71GSRK4bs7Sb+zFasRoc2xzlv7ZCJ+vkDBYFci8U6HY+or6Zy7ajf4mz4rK7nsWJQ==}
+
+  '@types/passport-openidconnect@0.1.3':
+    resolution: {integrity: sha512-k1Ni7bG/9OZNo2Qpjg2W6GajL+pww6ZPaNWMXfpteCX4dXf4QgaZLt2hjR5IiPrqwBT9+W8KjCTJ/uhGIoBx/g==}
 
   '@types/passport-strategy@0.2.38':
     resolution: {integrity: sha512-GC6eMqqojOooq993Tmnmp7AUTbbQSgilyvpCYQjT+H6JfG/g6RGc7nXEniZlp0zyKJ0WUdOiZWLBZft9Yug1uA==}
@@ -10545,6 +10554,10 @@ packages:
   passport-oauth2@1.8.0:
     resolution: {integrity: sha512-cjsQbOrXIDE4P8nNb3FQRCCmJJ/utnFKEz2NX209f7KOHPoX18gF7gBzBbLLsj2/je4KrgiwLLGjf0lm9rtTBA==}
     engines: {node: '>= 0.4.0'}
+
+  passport-openidconnect@0.1.2:
+    resolution: {integrity: sha512-JX3rTyW+KFZ/E9OF/IpXJPbyLO9vGzcmXB5FgSP2jfL3LGKJPdV7zUE8rWeKeeI/iueQggOeFa3onrCmhxXZTg==}
+    engines: {node: '>= 0.6.0'}
 
   passport-strategy@1.0.0:
     resolution: {integrity: sha512-CB97UUvDKJde2V0KDWWB3lyf6PC3FaZP7YxZ2G8OAtn9p4HI9j9JLP9qjOGZFvyl8uwNT8qM+hGnz/n16NI7oA==}
@@ -18552,6 +18565,13 @@ snapshots:
       '@types/oauth': 0.9.6
       '@types/passport': 1.0.17
 
+  '@types/passport-openidconnect@0.1.3':
+    dependencies:
+      '@types/express': 5.0.6
+      '@types/oauth': 0.9.6
+      '@types/passport': 1.0.17
+      '@types/passport-strategy': 0.2.38
+
   '@types/passport-strategy@0.2.38':
     dependencies:
       '@types/express': 5.0.6
@@ -24831,6 +24851,11 @@ snapshots:
       passport-strategy: 1.0.0
       uid2: 0.0.4
       utils-merge: 1.0.1
+
+  passport-openidconnect@0.1.2:
+    dependencies:
+      oauth: 0.10.2
+      passport-strategy: 1.0.0
 
   passport-strategy@1.0.0: {}
 
