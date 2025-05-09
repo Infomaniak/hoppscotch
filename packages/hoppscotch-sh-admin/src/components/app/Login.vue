@@ -46,6 +46,13 @@
           @click="signInWithMicrosoft"
         />
         <HoppSmartItem
+          v-if="allowedAuthProviders.includes('OIDC')"
+          :loading="signingInWithOidc"
+          :icon="IconOidc"
+          :label="`${oidcButtonText || 'Continue with OIDC'}`"
+          @click="signInWithOidc"
+        />
+        <HoppSmartItem
           v-if="allowedAuthProviders.includes('EMAIL')"
           :icon="IconEmail"
           :label="t('state.continue_email')"
@@ -160,6 +167,7 @@ import IconEmail from '~icons/auth/email';
 import IconGithub from '~icons/auth/github';
 import IconGoogle from '~icons/auth/google';
 import IconMicrosoft from '~icons/auth/microsoft';
+import IconOidc from '~icons/auth/oidc';
 import IconArrowLeft from '~icons/lucide/arrow-left';
 import IconFileText from '~icons/lucide/file-text';
 
@@ -168,6 +176,7 @@ const toast = useToast();
 
 const tosLink = import.meta.env.VITE_APP_TOS_LINK;
 const privacyPolicyLink = import.meta.env.VITE_APP_PRIVACY_POLICY_LINK;
+const oidcButtonText = import.meta.env.VITE_OIDC_TEXT;
 
 const form = ref({
   email: '',
@@ -178,6 +187,7 @@ const signingInWithGoogle = ref(false);
 const signingInWithGitHub = ref(false);
 const signingInWithMicrosoft = ref(false);
 const signingInWithEmail = ref(false);
+const signingInWithOidc = ref(false);
 const mode = ref('sign-in');
 const nonAdminUser = ref(false);
 
@@ -215,6 +225,19 @@ const signInWithGithub = () => {
   }
 
   signingInWithGitHub.value = false;
+};
+
+const signInWithOidc = () => {
+  signingInWithOidc.value = true;
+
+  try {
+    auth.signInUserWithOidc();
+  } catch (e) {
+    console.error(e);
+    toast.error(t('state.oidc_signin_failure'));
+  }
+
+  signingInWithOidc.value = false;
 };
 
 const signInWithMicrosoft = () => {

@@ -228,6 +228,7 @@ export default defineConfig({
           /announcements/,
           /admin/,
           /backend/,
+          /oidc/,
         ],
       },
     }),
