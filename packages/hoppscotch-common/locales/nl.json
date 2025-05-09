@@ -112,6 +112,7 @@
     "continue_with_github_enterprise": "Ga verder met GitHub Enterprise",
     "continue_with_google": "Ga verder met Google",
     "continue_with_microsoft": "Ga verder met Microsoft",
+    "continue_with_oidc": "Ga verder met OIDC",
     "email": "E-mail",
     "logged_out": "Uitgelogd",
     "login": "Log in",

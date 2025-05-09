@@ -112,6 +112,7 @@
     "continue_with_github_enterprise": "Continue with GitHub Enterprise",
     "continue_with_google": "Continuați cu Google",
     "continue_with_microsoft": "Continuați cu Microsoft",
+    "continue_with_oidc": "Continuați cu OIDC",
     "email": "E-mail",
     "logged_out": "Delogat",
     "login": "Autentificare",

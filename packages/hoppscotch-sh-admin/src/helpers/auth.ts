@@ -186,6 +186,12 @@ export const auth = {
     }/auth/github?redirect_uri=${import.meta.env.VITE_ADMIN_URL}`;
   },
 
+  signInUserWithOidc: () =>{
+    window.location.href = `${
+      import.meta.env.VITE_BACKEND_API_URL
+    }/auth/oidc?redirect_uri=${import.meta.env.VITE_ADMIN_URL}`;
+  },
+
   signInUserWithMicrosoft: () => {
     window.location.href = `${
       import.meta.env.VITE_BACKEND_API_URL
