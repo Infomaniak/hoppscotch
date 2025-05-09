@@ -112,6 +112,7 @@
     "continue_with_github_enterprise": "Continue with GitHub Enterprise",
     "continue_with_google": "Наставите са Гоогле -ом",
     "continue_with_microsoft": "Continue with Microsoft",
+    "continue_with_oidc": "Наставите са ОИДЦ-ом",
     "email": "Емаил",
     "logged_out": "Одјављени",
     "login": "Пријавите се",
