@@ -112,6 +112,7 @@
     "continue_with_github_enterprise": "المواصلة من خلال جيت هاب Enterprise",
     "continue_with_google": "المواصلة من خلال جوجل",
     "continue_with_microsoft": "المواصلة من خلال مايكروسوفت",
+    "continue_with_oidc": "تواصل مع OIDC",
     "email": "بريد إلكتروني",
     "logged_out": "تسجيل الخروج",
     "login": "تسجيل الدخول",
