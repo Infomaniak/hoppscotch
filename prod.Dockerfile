@@ -146,7 +146,7 @@ COPY --from=sh_admin_builder /usr/src/app/packages/hoppscotch-sh-admin/dist-mult
 COPY --from=sh_admin_builder /usr/src/app/packages/hoppscotch-sh-admin/dist-subpath-access /site/sh-admin-subpath-access
 
 WORKDIR /site
-CMD ["node","/site/prod_run.mjs"]
+CMD ["node", "/site/prod_run.mjs"]
 
 EXPOSE 80
 EXPOSE 3100

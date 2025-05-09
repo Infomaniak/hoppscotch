@@ -317,6 +317,9 @@ importers:
       '@types/passport-microsoft':
         specifier: 2.1.0
         version: 2.1.0
+      '@types/passport-openidconnect':
+        specifier: 0.1.3
+        version: 0.1.3
       '@types/supertest':
         specifier: 6.0.3
         version: 6.0.3
@@ -347,6 +350,9 @@ importers:
       jest-mock-extended:
         specifier: 4.0.0
         version: 4.0.0(@jest/globals@30.0.5)(jest@30.0.5(@types/node@24.3.0)(ts-node@10.9.2(@swc/core@1.4.2)(@types/node@24.3.0)(typescript@5.9.2)))(typescript@5.9.2)
+      passport-openidconnect:
+        specifier: 0.1.2
+        version: 0.1.2
       prettier:
         specifier: 3.6.2
         version: 3.6.2
@@ -7043,6 +7049,9 @@ packages:
   '@types/passport-oauth2@1.4.15':
     resolution: {integrity: sha512-9cUTP/HStNSZmhxXGuRrBJfEWzIEJRub2eyJu3CvkA+8HAMc9W3aKdFhVq+Qz1hi42qn+GvSAnz3zwacDSYWpw==}
 
+  '@types/passport-openidconnect@0.1.3':
+    resolution: {integrity: sha512-k1Ni7bG/9OZNo2Qpjg2W6GajL+pww6ZPaNWMXfpteCX4dXf4QgaZLt2hjR5IiPrqwBT9+W8KjCTJ/uhGIoBx/g==}
+
   '@types/passport-strategy@0.2.38':
     resolution: {integrity: sha512-GC6eMqqojOooq993Tmnmp7AUTbbQSgilyvpCYQjT+H6JfG/g6RGc7nXEniZlp0zyKJ0WUdOiZWLBZft9Yug1uA==}
 
@@ -12337,6 +12346,10 @@ packages:
   passport-oauth2@1.8.0:
     resolution: {integrity: sha512-cjsQbOrXIDE4P8nNb3FQRCCmJJ/utnFKEz2NX209f7KOHPoX18gF7gBzBbLLsj2/je4KrgiwLLGjf0lm9rtTBA==}
     engines: {node: '>= 0.4.0'}
+
+  passport-openidconnect@0.1.2:
+    resolution: {integrity: sha512-JX3rTyW+KFZ/E9OF/IpXJPbyLO9vGzcmXB5FgSP2jfL3LGKJPdV7zUE8rWeKeeI/iueQggOeFa3onrCmhxXZTg==}
+    engines: {node: '>= 0.6.0'}
 
   passport-strategy@1.0.0:
     resolution: {integrity: sha512-CB97UUvDKJde2V0KDWWB3lyf6PC3FaZP7YxZ2G8OAtn9p4HI9j9JLP9qjOGZFvyl8uwNT8qM+hGnz/n16NI7oA==}
@@ -22367,6 +22380,13 @@ snapshots:
       '@types/oauth': 0.9.4
       '@types/passport': 1.0.16
 
+  '@types/passport-openidconnect@0.1.3':
+    dependencies:
+      '@types/express': 5.0.3
+      '@types/oauth': 0.9.4
+      '@types/passport': 1.0.16
+      '@types/passport-strategy': 0.2.38
+
   '@types/passport-strategy@0.2.38':
     dependencies:
       '@types/express': 5.0.3
@@ -29351,6 +29371,11 @@ snapshots:
       passport-strategy: 1.0.0
       uid2: 0.0.4
       utils-merge: 1.0.1
+
+  passport-openidconnect@0.1.2:
+    dependencies:
+      oauth: 0.10.0
+      passport-strategy: 1.0.0
 
   passport-strategy@1.0.0: {}
 
