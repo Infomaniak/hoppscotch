@@ -146,6 +146,7 @@
     "continue_with_github_enterprise": "Continuar com GitHub Enterprise",
     "continue_with_google": "Continuar com o Google",
     "continue_with_microsoft": "Continuar com Microsoft",
+    "continue_with_oidc": "Continue com OIDC",
     "email": "E-mail",
     "logged_out": "Desconectado",
     "login": "Conecte-se",
