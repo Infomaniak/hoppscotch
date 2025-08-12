@@ -77,7 +77,7 @@ ENV PORT=8080
 
 WORKDIR /dist/backend
 
-CMD ["node", "prod_run.mjs"]
+CMD ["node", "--max-old-space-size=4096", "prod_run.mjs"]
 EXPOSE 80
 EXPOSE 3170
 
