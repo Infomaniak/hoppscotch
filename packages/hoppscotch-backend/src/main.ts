@@ -86,11 +86,15 @@ async function bootstrap() {
     }),
   );
 
-  if (configService.get('TRUSTED_PROXIES')) {
-    console.log(
-      `Enabling trust proxy: ${configService.get('TRUSTED_PROXIES')}`,
-    );
-    app.set('trust proxy', configService.get('TRUSTED_PROXIES'));
+  if (configService.get('TRUSTED_PROXIES') || 'false' !== 'false') {
+    const trustedProxies =
+      configService.get('TRUSTED_PROXIES') === 'true'
+        ? true
+        : configService.get('TRUSTED_PROXIES');
+
+    console.log(`Enabling trust proxy: ${trustedProxies}`);
+
+    app.set('trust proxy', trustedProxies);
   }
 
   app.use(morgan(':remote-addr :method :url :status - :response-time ms'));
