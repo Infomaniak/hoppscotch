@@ -37,7 +37,7 @@
   "devDependencies": {
     "@types/lodash": "4.17.24",
     "typescript": "5.9.3",
-    "vite": "7.3.2"
+    "vite": "6.4.2"
   },
   "dependencies": {
     "fp-ts": "2.16.11",
